@@ -7,9 +7,9 @@ pipeline () {
       }	
     } 
    stage(‘Test’){
-      steps{
-		input(‘Do you want to proceed?’)
-      }	
+      input {
+         message 'Want to proceed?'
+      }
     } 
  }
 }
