@@ -11,12 +11,12 @@ pipeline () {
 		echo ‘Testing application….’
         }
     } 
-stage(’User Approval’) {
+stage(’UserApproval’) {
 	steps{
 		input 'Ready to approve?’
         }
     } 
-  stage(’Upload to Hockey’) {
+  stage(’UploadToHockey’) {
 	steps{
 		hockeyApp applications: [[apiToken: '2b86281293dd4b14935296a5cd1e4188', downloadAllowed: false, filePath: 'app/build/outputs/apk/debug/app-debug.apk', mandatory: false, notifyTeam: false, releaseNotesMethod: none(), uploadMethod: appCreation(false)]], debugMode: false, failGracefully: false
         }
