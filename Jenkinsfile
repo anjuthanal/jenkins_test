@@ -22,4 +22,9 @@ pipeline () {
         }
    } 
  }
+post{
+   success{
+     mail bcc: '', body: 'Yo !!', cc: '', from: '', replyTo: '', subject: 'Build Success', to: 'anju.thanal@gmail.com'
+   }
+ }
 }
