@@ -6,11 +6,6 @@ pipeline () {
 		sh './gradlew clean assembleDebug --stacktrace'
       }	
     } 
-   stage(’Testing’) {
-	steps{
-		echo ‘Testing application….’
-        }
-    } 
-  
+   
  }
 }
