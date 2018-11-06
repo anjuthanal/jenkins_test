@@ -6,9 +6,9 @@ pipeline () {
 		sh './gradlew clean assembleDebug --stacktrace'
       }	
     } 
-   stage(‘Permissions’){
+   stage(‘Test’){
 	steps {
-         echo ‘Permission’
+         echo 'Hello World'
       }
       input {
          message 'Want to proceed?'
@@ -18,13 +18,8 @@ pipeline () {
 	 steps {  
           script{
 	    hockeyApp applications: [[apiToken: '2b86281293dd4b14935296a5cd1e4188', downloadAllowed: false, filePath: 'app/build/outputs/apk/debug/app-debug.apk', mandatory: false, notifyTeam: false, releaseNotesMethod: none(), uploadMethod: appCreation(false)]], debugMode: false, failGracefully: false
-}
+          }
         }
    } 
- }
- post{
-   success{
-     mail bcc: '', body: 'Yo !!', cc: '', from: '', replyTo: '', subject: 'Build Success', to: 'anju.thanal@gmail.com'
-   }
  }
 }
