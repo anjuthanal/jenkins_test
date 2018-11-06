@@ -6,9 +6,9 @@ pipeline () {
 		sh './gradlew clean assembleDebug --stacktrace'
       }	
     } 
-   stage(‘Test’){
+   stage(‘Permissions’){
 	steps {
-         echo 'Hello World'
+         echo ‘Permission’
       }
       input {
          message 'Want to proceed?'
@@ -21,5 +21,10 @@ pipeline () {
 }
         }
    } 
+ }
+ post{
+   success{
+	echo” send mail”
+   }
  }
 }
