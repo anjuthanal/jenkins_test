@@ -24,7 +24,9 @@ pipeline () {
  }
  post{
    success{
+     steps {
 	echo” send mail”
+     }
    }
  }
 }
