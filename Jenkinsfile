@@ -25,7 +25,7 @@ pipeline () {
  post{
    success{
      steps {
-	echo” send mail”
+	echo  ‘send mail’
      }
    }
  }
