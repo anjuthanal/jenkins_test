@@ -13,7 +13,7 @@ pipeline () {
     } 
 stage(’UserApproval’) {
 	steps{
-		input 'Ready to approve?’
+		input ‘Ok?’
         }
     } 
   stage(’UploadToHockey’) {
