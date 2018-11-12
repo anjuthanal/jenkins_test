@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
                     textView.setText(text);
 
                 }else{
-                    //       
+                    //         
                     Toast.makeText(getApplicationContext(),"Enter text",Toast.LENGTH_LONG).show();
                 }
 
